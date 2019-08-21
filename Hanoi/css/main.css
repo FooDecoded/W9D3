@@ -1,0 +1,7 @@
+ul {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: green;
+  margin: 20px;
+}
