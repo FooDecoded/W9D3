@@ -10,11 +10,15 @@ class View {
     $("ul").on("click", (e) => {
       let cell = $(e.target);
       if (cell.hasClass("selected")) {
-        alert("invalid move!")
+        alert("invalid move!");
       }
+      let player = this.game.currentPlayer;
       this.game.playMove(cell.data("pos"));
       cell.addClass("selected");
-      cell.text(this.game.currentPlayer);
+      cell.text(player);
+      if (this.game.isOver()) {
+        alert(player);
+      }
     });
     
   }
